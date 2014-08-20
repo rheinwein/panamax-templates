@@ -1,0 +1,27 @@
+---
+name: Rails with Postgres
+description: doesn't work
+keywords: ''
+type: Rails
+documentation: 'none none none none none none none none none none none none none none
+  none none none none none none none '
+images:
+- name: rheinwein_pmx-rails_latest
+  source: rheinwein/pmx-rails:latest
+  category: Web Tier
+  type: Default
+  ports:
+  - host_port: '8080'
+    container_port: '3000'
+    proto: TCP
+  links:
+  - service: rheinwein_pmx-pgsql
+    alias: DB_1
+- name: rheinwein_pmx-pgsql
+  source: rheinwein/pmx-pgsql:latest
+  category: DB
+  type: Default
+  ports:
+  - host_port: '5432'
+    container_port: '5432'
+    proto: TCP
