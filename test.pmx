@@ -1,0 +1,13 @@
+---
+name: test
+description: "##markdown"
+keywords: foo, bar
+type: HuBot
+documentation: "##more stuff"
+images:
+- name: haproxy_latest
+  source: haproxy:latest
+  type: Default
+- name: nginx
+  source: nginx:latest
+  type: Default
